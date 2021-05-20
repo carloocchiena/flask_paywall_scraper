@@ -19,6 +19,7 @@
 		<p>Enter a valid URL:</p>
 		<form method="post" action=".">
 			<p><input name="url" placeholder="https://www.site-with-blocked-content.com" size="68" /></p>
+			<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
 			<p><input type="submit" value="Scan!" /></p>
 		</form>
 		<p>{{errors}}</p>
